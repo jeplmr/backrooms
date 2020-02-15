@@ -5,19 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public Maze mazePrefab; 
-    private Maze _mazeInstantance; 
+    public Backrooms backroomsPrefab; 
 
-    private void Start(){
-        _mazeInstantance = Instantiate(mazePrefab) as Maze; 
-        BeginGame(); 
+    void Start(){
+        backroomsPrefab.BeginGame(); 
     }
 
-    private void BeginGame(){
-        _mazeInstantance.Genrate(); 
-    }
-
-    private void RestartGame(){
-
-    }
 }
