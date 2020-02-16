@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 1000
-  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientSkyColor: {r: 0.2976456, g: 0.3018868, b: 0.1295835, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -325,12 +325,12 @@ PrefabInstance:
         type: 3}
       propertyPath: roomPrefab
       value: 
-      objectReference: {fileID: 3208185222337332726, guid: a751e19894180b549b1806f6d3fe6c62,
+      objectReference: {fileID: 846749034, guid: 8fc97b6a49a6ac64c9dbfa3f01e0870d,
         type: 3}
     - target: {fileID: 4281959723670244661, guid: b2e2d34cd1886424c8bd428923584552,
         type: 3}
       propertyPath: roomSize
-      value: 10
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2e2d34cd1886424c8bd428923584552, type: 3}
