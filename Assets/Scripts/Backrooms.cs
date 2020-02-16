@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Backrooms : MonoBehaviour
 {
-    public Room roomPrefab; 
+    public Room[] roomPrefabs; 
     public int roomSize; 
     private int numRoomsSpawned; 
     private List<Room> rooms = new List<Room>(); 
@@ -15,7 +15,7 @@ public class Backrooms : MonoBehaviour
     }
 
     private void SpawnRoom(int x, int z){
-        Room newRoom = Instantiate(roomPrefab, new Vector3(x * roomSize, 0, z * roomSize), Quaternion.identity) as Room; 
+        Room newRoom = Instantiate(roomPrefabs[Random.Range(0, roomPrefabs.Length)], new Vector3(x * roomSize, 0, z * roomSize), Quaternion.identity) as Room; 
         newRoom.SetID(x, z); 
         newRoom.name = "Room " + x + ", " + z;
         rooms.Add(newRoom);
