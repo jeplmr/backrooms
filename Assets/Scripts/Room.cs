@@ -27,14 +27,16 @@ public class Room : MonoBehaviour
 
     void Awake(){
         if(_br == null){
-            _br = GameObject.FindGameObjectWithTag("Backrooms").GetComponent<Backrooms>();  
+            _br = GameObject.FindGameObjectWithTag("Backrooms").GetComponent<Backrooms>();
         }
     }
 
     void OnTriggerEnter(Collider other){
         if(other.gameObject.tag == "Player"){
             _occupied = true;
-            _br.CheckForNeighbors(ID.posX, ID.posZ); 
+            _br.InstantiateNeighbors(ID.posX, ID.posZ); 
+            _br.EnableNeighbors(ID.posX, ID.posZ); 
+            _br.DisableRooms(ID.posX, ID.posZ); 
         }
     }
 

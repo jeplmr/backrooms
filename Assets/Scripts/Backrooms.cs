@@ -20,40 +20,73 @@ public class Backrooms : MonoBehaviour
         newRoom.name = "Room " + x + ", " + z;
         rooms.Add(newRoom);
         numRoomsSpawned++;
-        Debug.Log(numRoomsSpawned.ToString()); 
     }
 
-    public void CheckForNeighbors(int x, int z){
-        foreach(Room r in rooms){
-            if(r.isActiveAndEnabled){
-                if(r.isOccupied()){
-                    ///////////////////////////////////////////////////////////////////
-                    //if no neighbors exist, Instantiate them. Otherwise, enable them//
-                    ///////////////////////////////////////////////////////////////////
-                    if(!rooms.Exists(e => e.name == "Room " + (r.ID.posX + 1) + ", " + r.ID.posZ)){
-                        SpawnRoom(r.ID.posX + 1, r.ID.posZ);
-                    } 
-                    rooms.Find(e => e.name == "Room " + (r.ID.posX + 1) + ", " + r.ID.posZ).gameObject.SetActive(true);
-
-                    if(!rooms.Exists(e => e.name == "Room " + (r.ID.posX - 1) + ", " + r.ID.posZ)){
-                        SpawnRoom(r.ID.posX - 1, r.ID.posZ); 
-                    }
-                    rooms.Find(e => e.name == "Room " + (r.ID.posX - 1) + ", " + r.ID.posZ).gameObject.SetActive(true);
-
-                    if(!rooms.Exists(e => e.name == "Room " + r.ID.posX + ", " + (r.ID.posZ + 1) )){
-                        SpawnRoom(r.ID.posX, r.ID.posZ + 1 ); 
-                    }
-                    rooms.Find(e => e.name == "Room " + r.ID.posX + ", " + (r.ID.posZ + 1)).gameObject.SetActive(true);
-
-                    if(!rooms.Exists(e => e.name == "Room " + r.ID.posX + ", " + (r.ID.posZ - 1))){
-                        SpawnRoom(r.ID.posX, r.ID.posZ - 1); 
-                    }
-                    rooms.Find(e => e.name == "Room " + r.ID.posX + ", " + (r.ID.posZ - 1)).gameObject.SetActive(true);
-                } else {
-                    r.gameObject.SetActive(false); 
-                }
+    public void InstantiateNeighbors(int x, int z){  
+        ///////////////////////////////////////////////////////////////////
+        //if no neighbors exist, Instantiate them//////////////////////////
+        ///////////////////////////////////////////////////////////////////
+        for(int i = 0; i < rooms.Count; i++){
+            if(!rooms.Exists(e => e.name == "Room " + (x + 1) + ", " + z)){
+                SpawnRoom(x + 1, z);
+            } 
+            if(!rooms.Exists(e => e.name == "Room " + (x - 1) + ", " + z)){
+                SpawnRoom(x - 1, z); 
+            }
+            if(!rooms.Exists(e => e.name == "Room " + x + ", " + (z + 1))){
+                SpawnRoom(x, z + 1 ); 
+            }
+            if(!rooms.Exists(e => e.name == "Room " + x + ", " + (z - 1))){
+                SpawnRoom(x, z - 1); 
             }
         }
     }
+
+    public void EnableNeighbors(int x, int z){
+        ///////////////////////////////////////////////////////////////////
+        //SetActive(true) on neighboring rooms/////////////////////////////
+        ///////////////////////////////////////////////////////////////////
+        foreach(Room r in rooms){ 
+            if(r.isActiveAndEnabled){
+                rooms.Find(e => e.name == "Room " + (x + 1) + ", " + z).gameObject.SetActive(true);
+                rooms.Find(e => e.name == "Room " + (x - 1) + ", " + z).gameObject.SetActive(true);
+                rooms.Find(e => e.name == "Room " + x + ", " + (z + 1)).gameObject.SetActive(true);
+                rooms.Find(e => e.name == "Room " + x + ", " + (z - 1)).gameObject.SetActive(true);
+            }
+        }
+    }
+
+    public void DisableRooms(int x, int z){
+        for(int i = 0; i < rooms.Count; i++){
+            if(rooms.Exists(e => e.name == "Room " + (x - 1) + ", " + (z - 1))){
+                rooms.Find(e => e.name == "Room " + (x - 1) + ", " + (z - 1)).gameObject.SetActive(false);
+            }   
+            if(rooms.Exists(e => e.name == "Room " + (x + 1) + ", " + (z - 1))){
+                rooms.Find(e => e.name == "Room " + (x + 1) + ", " + (z - 1)).gameObject.SetActive(false);
+            }
+
+            if(rooms.Exists(e => e.name == "Room " + (x + 1) + ", " + (z + 1))){
+                rooms.Find(e => e.name == "Room " + (x + 1) + ", " + (z + 1)).gameObject.SetActive(false);
+            }   
+            if(rooms.Exists(e => e.name == "Room " + (x - 1) + ", " + (z + 1))){
+                rooms.Find(e => e.name == "Room " + (x - 1) + ", " + (z + 1)).gameObject.SetActive(false);
+            }
+
+            if(rooms.Exists(e => e.name == "Room " + x + ", " + (z - 2))){
+                rooms.Find(e => e.name == "Room " + x + ", " + (z - 2)).gameObject.SetActive(false);
+            }   
+            if(rooms.Exists(e => e.name == "Room " + x + ", " + (z + 2))){
+                rooms.Find(e => e.name == "Room " + x + ", " + (z + 2)).gameObject.SetActive(false);
+            }
+
+            if(rooms.Exists(e => e.name == "Room " + (x + 2) + ", " + z)){
+                rooms.Find(e => e.name == "Room " + (x + 2) + ", " + z).gameObject.SetActive(false);
+            }
+            if(rooms.Exists(e => e.name == "Room " + (x - 2) + ", " + z)){
+                rooms.Find(e => e.name == "Room " + (x - 2) + ", " + z).gameObject.SetActive(false);
+            }  
+        }
+    }
+    
 
 }
