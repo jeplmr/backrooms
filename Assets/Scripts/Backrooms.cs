@@ -25,20 +25,18 @@ public class Backrooms : MonoBehaviour
     public void InstantiateNeighbors(int x, int z){  
         ///////////////////////////////////////////////////////////////////
         //if no neighbors exist, Instantiate them//////////////////////////
-        ///////////////////////////////////////////////////////////////////
-        for(int i = 0; i < rooms.Count; i++){
-            if(!rooms.Exists(e => e.name == "Room " + (x + 1) + ", " + z)){
-                SpawnRoom(x + 1, z);
-            } 
-            if(!rooms.Exists(e => e.name == "Room " + (x - 1) + ", " + z)){
-                SpawnRoom(x - 1, z); 
-            }
-            if(!rooms.Exists(e => e.name == "Room " + x + ", " + (z + 1))){
-                SpawnRoom(x, z + 1 ); 
-            }
-            if(!rooms.Exists(e => e.name == "Room " + x + ", " + (z - 1))){
-                SpawnRoom(x, z - 1); 
-            }
+        ///////////////////////////////////////////////////////////////////  
+        if(!rooms.Exists(e => e.name == "Room " + (x + 1) + ", " + z)){
+            SpawnRoom(x + 1, z);
+        } 
+        if(!rooms.Exists(e => e.name == "Room " + (x - 1) + ", " + z)){
+            SpawnRoom(x - 1, z); 
+        }
+        if(!rooms.Exists(e => e.name == "Room " + x + ", " + (z + 1))){
+            SpawnRoom(x, z + 1 ); 
+        }
+        if(!rooms.Exists(e => e.name == "Room " + x + ", " + (z - 1))){
+            SpawnRoom(x, z - 1); 
         }
     }
 
@@ -46,46 +44,43 @@ public class Backrooms : MonoBehaviour
         ///////////////////////////////////////////////////////////////////
         //SetActive(true) on neighboring rooms/////////////////////////////
         ///////////////////////////////////////////////////////////////////
-        foreach(Room r in rooms){ 
-            if(r.isActiveAndEnabled){
-                rooms.Find(e => e.name == "Room " + (x + 1) + ", " + z).gameObject.SetActive(true);
-                rooms.Find(e => e.name == "Room " + (x - 1) + ", " + z).gameObject.SetActive(true);
-                rooms.Find(e => e.name == "Room " + x + ", " + (z + 1)).gameObject.SetActive(true);
-                rooms.Find(e => e.name == "Room " + x + ", " + (z - 1)).gameObject.SetActive(true);
-            }
-        }
+        rooms.Find(e => e.name == "Room " + (x + 1) + ", " + z).gameObject.SetActive(true);
+        rooms.Find(e => e.name == "Room " + (x - 1) + ", " + z).gameObject.SetActive(true);
+        rooms.Find(e => e.name == "Room " + x + ", " + (z + 1)).gameObject.SetActive(true);
+        rooms.Find(e => e.name == "Room " + x + ", " + (z - 1)).gameObject.SetActive(true);
     }
 
     public void DisableRooms(int x, int z){
-        for(int i = 0; i < rooms.Count; i++){
-            if(rooms.Exists(e => e.name == "Room " + (x - 1) + ", " + (z - 1))){
-                rooms.Find(e => e.name == "Room " + (x - 1) + ", " + (z - 1)).gameObject.SetActive(false);
-            }   
-            if(rooms.Exists(e => e.name == "Room " + (x + 1) + ", " + (z - 1))){
-                rooms.Find(e => e.name == "Room " + (x + 1) + ", " + (z - 1)).gameObject.SetActive(false);
-            }
-
-            if(rooms.Exists(e => e.name == "Room " + (x + 1) + ", " + (z + 1))){
-                rooms.Find(e => e.name == "Room " + (x + 1) + ", " + (z + 1)).gameObject.SetActive(false);
-            }   
-            if(rooms.Exists(e => e.name == "Room " + (x - 1) + ", " + (z + 1))){
-                rooms.Find(e => e.name == "Room " + (x - 1) + ", " + (z + 1)).gameObject.SetActive(false);
-            }
-
-            if(rooms.Exists(e => e.name == "Room " + x + ", " + (z - 2))){
-                rooms.Find(e => e.name == "Room " + x + ", " + (z - 2)).gameObject.SetActive(false);
-            }   
-            if(rooms.Exists(e => e.name == "Room " + x + ", " + (z + 2))){
-                rooms.Find(e => e.name == "Room " + x + ", " + (z + 2)).gameObject.SetActive(false);
-            }
-
-            if(rooms.Exists(e => e.name == "Room " + (x + 2) + ", " + z)){
-                rooms.Find(e => e.name == "Room " + (x + 2) + ", " + z).gameObject.SetActive(false);
-            }
-            if(rooms.Exists(e => e.name == "Room " + (x - 2) + ", " + z)){
-                rooms.Find(e => e.name == "Room " + (x - 2) + ", " + z).gameObject.SetActive(false);
-            }  
+        ///////////////////////////////////////////////////////////////////
+        //SetActive(false) on faraway rooms////////////////////////////////
+        ///////////////////////////////////////////////////////////////////
+        if(rooms.Exists(e => e.name == "Room " + (x - 1) + ", " + (z - 1))){
+            rooms.Find(e => e.name == "Room " + (x - 1) + ", " + (z - 1)).gameObject.SetActive(false);
+        }   
+        if(rooms.Exists(e => e.name == "Room " + (x + 1) + ", " + (z - 1))){
+            rooms.Find(e => e.name == "Room " + (x + 1) + ", " + (z - 1)).gameObject.SetActive(false);
         }
+
+        if(rooms.Exists(e => e.name == "Room " + (x + 1) + ", " + (z + 1))){
+            rooms.Find(e => e.name == "Room " + (x + 1) + ", " + (z + 1)).gameObject.SetActive(false);
+        }   
+        if(rooms.Exists(e => e.name == "Room " + (x - 1) + ", " + (z + 1))){
+            rooms.Find(e => e.name == "Room " + (x - 1) + ", " + (z + 1)).gameObject.SetActive(false);
+        }
+
+        if(rooms.Exists(e => e.name == "Room " + x + ", " + (z - 2))){
+            rooms.Find(e => e.name == "Room " + x + ", " + (z - 2)).gameObject.SetActive(false);
+        }   
+        if(rooms.Exists(e => e.name == "Room " + x + ", " + (z + 2))){
+            rooms.Find(e => e.name == "Room " + x + ", " + (z + 2)).gameObject.SetActive(false);
+        }
+
+        if(rooms.Exists(e => e.name == "Room " + (x + 2) + ", " + z)){
+            rooms.Find(e => e.name == "Room " + (x + 2) + ", " + z).gameObject.SetActive(false);
+        }
+        if(rooms.Exists(e => e.name == "Room " + (x - 2) + ", " + z)){
+            rooms.Find(e => e.name == "Room " + (x - 2) + ", " + z).gameObject.SetActive(false);
+        }   
     }
     
 
