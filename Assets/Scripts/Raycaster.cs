@@ -19,9 +19,7 @@ public class Raycaster : MonoBehaviour
     void FixedUpdate(){
         RaycastHit hit; 
         if(Physics.Raycast(transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, mask)){
-            Debug.Log(hit); 
             _hit = hit.point; 
-            Debug.Log(hit.collider.gameObject.name); 
             FloatParameter newFocusDistance = new FloatParameter { value = Vector3.Distance(transform.position, hit.point) };
             if(newFocusDistance > 10f){
                 newFocusDistance = new FloatParameter {value = 10f}; 
@@ -30,8 +28,11 @@ public class Raycaster : MonoBehaviour
         } 
     }
 
+/*
     void OnDrawGizmos(){
         Gizmos.DrawSphere(_hit, 0.5f);
         Gizmos.DrawLine(transform.position, _hit); 
     }
+*/
+
 }
