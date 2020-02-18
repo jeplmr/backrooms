@@ -42,13 +42,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -133,13 +133,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -224,13 +224,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -315,13 +315,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -406,13 +406,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -497,13 +497,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -588,13 +588,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -679,13 +679,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -770,13 +770,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -861,13 +861,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -952,13 +952,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1043,13 +1043,13 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.8106268, g: 0.8584906, b: 0.5709772, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 15
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -3340,6 +3340,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6924736820436632227}
+  - {fileID: 6798143870616665242}
   m_Father: {fileID: 6535563508363036930}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4233,6 +4234,106 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &4953580886557966215
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7930666357733606192}
+    m_Modifications:
+    - target: {fileID: 1939217759907431266, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_Name
+      value: Light Switch (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431266, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.7547
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071079
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7622502148004341988, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217759664593786, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939217760126812161, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4162693843445845369, guid: 08971d49882b1274db7e55e862dc93ff,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08971d49882b1274db7e55e862dc93ff, type: 3}
+--- !u!4 &6798143870616665242 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 4953580886557966215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8858834678373204414
 PrefabInstance:
   m_ObjectHideFlags: 0
