@@ -10,6 +10,7 @@ public class Raycaster : MonoBehaviour
     private PostProcessVolume _volume;
     private DepthOfField _DoF;
     private Vector3 _hit; 
+    public LayerMask mask; 
     
     void Start(){
         _volume.profile.TryGetSettings<DepthOfField>(out _DoF);
@@ -17,17 +18,20 @@ public class Raycaster : MonoBehaviour
 
     void FixedUpdate(){
         RaycastHit hit; 
-        Physics.Raycast(transform.position, Camera.main.transform.forward, out hit);  
-        _hit = hit.point; 
-        var distance = Vector3.Distance(transform.position, hit.transform.position);
-        FloatParameter newFocusDistance = new FloatParameter { value = Vector3.Distance(transform.position, hit.point) };
-        _DoF.focusDistance.value = newFocusDistance;
-        
+        if(Physics.Raycast(transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, mask)){
+            Debug.Log(hit); 
+            _hit = hit.point; 
+            Debug.Log(hit.collider.gameObject.name); 
+            FloatParameter newFocusDistance = new FloatParameter { value = Vector3.Distance(transform.position, hit.point) };
+            if(newFocusDistance > 10f){
+                newFocusDistance = new FloatParameter {value = 10f}; 
+            }
+            _DoF.focusDistance.value = newFocusDistance;
+        } 
     }
 
     void OnDrawGizmos(){
-        Gizmos.DrawSphere(_hit, 0.25f); 
+        Gizmos.DrawSphere(_hit, 0.5f);
+        Gizmos.DrawLine(transform.position, _hit); 
     }
-
-
 }

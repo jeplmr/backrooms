@@ -3355,7 +3355,7 @@ GameObject:
   - component: {fileID: 6535563508363036930}
   - component: {fileID: 846749034}
   - component: {fileID: 1729310263}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Room 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4259,7 +4259,7 @@ PrefabInstance:
     - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
         type: 3}
@@ -4359,7 +4359,7 @@ PrefabInstance:
     - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 1939217759907431197, guid: 08971d49882b1274db7e55e862dc93ff,
         type: 3}
