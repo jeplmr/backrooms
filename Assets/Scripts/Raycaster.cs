@@ -16,7 +16,7 @@ public class Raycaster : MonoBehaviour
         _volume.profile.TryGetSettings<DepthOfField>(out _DoF);
     }
 
-    void FixedUpdate(){
+    void Update(){
         RaycastHit hit; 
         if(Physics.Raycast(transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, mask)){
             _hit = hit.point; 
